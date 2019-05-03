@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- CSS -->
+        <link href="bone.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="img/1.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="img/1.png" type="image/x-icon" />
+                <title>ENGIGYAB | INTERNET PAYMENT CALCULATOR</title>
+        <script>
+        function dataused()
+{
+     var a=Number(document.getElementById("used").value);
+    a=a*1024;
+    var b=a;
+    var c=0;
+    if(b >=0 && b <=1024)
+        {
+            c+=((b/10));
+        }
+		
+
+    if(b >1024 && b <=2048)
+        {
+		
+            c+=((b/10));
+            c+=90;
+        }
+		
+    if(b >2048 && b <=3072)
+		{
+		
+            c+=((b/5));
+            c+=150;
+        
+		}
+    if(b >3072 && b <=4096)
+        {
+            c+=((b/7));
+            c+=250;
+        
+		}
+    if(b >4096 && b<=4406)
+        {
+		
+                c+=300;
+                
+            
+        }
+	if(b >4406 && b<=5120)
+        {
+		
+               
+                c+=((count-4403.2)/10);
+				 c+=300;
+            
+        }
+		
+     document.getElementById("pay").value=c;
+alert("Total amount is ->"+c);	
+
+}
+    </script>      
+    </head>
+    <body style="background-color: blue;">
+    <center>
+        <h1>
+            INTERNET-PAYMENT - CALCULATION 
+        </h1>
+    
+    <div class="container">
+        <table border="1px" style="background-color: white;" >
+            <tr>
+                <th>DATA</th><th> Amount </th>
+            </tr>
+            <tr style="padding: 10px 10px 10px 10px;">
+                <td>0-1 GB</td><td>1Rupees /10MB</td>
+            </tr>
+            <tr style="padding: 10px 10px 10px 10px;">
+                <td>1-2 GB</td><td>90 + 1Rupees/10mb</td>
+            </tr>
+            <tr style="padding: 10px 10px 10px 10px;">
+                <td>2-3 GB</td><td>150 + 1rupees/5mb</td>
+            </tr>
+            <tr style="padding: 10px 10px 10px 10px;">
+                <td>3-4 GB</td><td>250 + 1rupee/7mb</td>
+            </tr>
+            <tr>
+                <td>4-5 GB</td><td>300(till 4.3 GB)+ 1rupee/10mb(after 4.3 GB)</td>
+            </tr><br>
+        </table>
+        <br><br>
+        <form>
+            <div class="form-group" >
+             <input  type="text" class="form-control" id="used" placeholder="Enter the amount of data used eg-> 1.1" name="data" $" required = "true">
+            </div>
+            <br><button type="submit" name="submit" class="btn btn-primary" onclick="dataused();">Submit</button><br><br>
+            <br><input type="text" class="form-control" id="pay" placeholder="Total Amount" ><br>
+						
+
+        
+    </div>
+    </center>
+    </body>
+</html>
+
+<!--MADE BY KUNAL SINGH-->
